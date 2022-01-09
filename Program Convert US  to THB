@@ -1,0 +1,73 @@
+import java.util.Scanner;
+public class ATMdollar {
+	
+	private static String b100;
+	private static String b500;
+	private static String b50;
+	private static String remai3;
+	private static String b20;
+	private static String b10;
+	private static String b5;
+	private static String b2;
+	private static String b1;
+	private static String b0;
+	private static String b05;
+	private static String b025;
+	private static int baht;
+
+	public static void main(String[] args){
+		try (Scanner input = new Scanner(System.in)) {
+			System.out.print("Enter us dollar = ");
+			double us = input.nextDouble( );
+			double bath = us*33.44; //64bits
+			System.out.println("baht = "+bath);
+			
+				int b1000 = (int)(bath/1000); //casting int 32 bit
+			double remain1000 = bath%1000;
+			
+				int b500 = (int)(remain1000/500);
+			double remain500 = remain1000%500;
+			
+				int b100 = (int)(remain500/100);
+			double remain100 = remain500%100;
+			
+			  	int b50 = (int)(remain100/50);
+			double remain50 = remain100%50;
+			
+			  	int b20 = (int)(remain50/20);
+			double remain20 = remain50%20;
+			
+			  	int b10 = (int)(remain20/10);
+			double remain10 = remain20%10;
+			
+				int b5 = (int)(remain10/5);
+			double remain5 = remain10%5;
+			
+				int b2 = (int)(remain5/2);
+			double remain2 = remain5%2;
+				
+				int b1 = (int)(remain2/1);
+			double remain1 = remain2%1;
+				
+				int c050 = (int)(remain1/0.50);
+			double remain050 = remain1%0.50;
+				
+				int c025 = (int)(remain050/0.25);
+	
+			System.out.println("1000:"+b1000);
+			System.out.println("500:"+b500);
+			System.out.println("100:"+b100);
+			System.out.println("50:"+b50);
+			System.out.println("20:"+b20);
+			System.out.println("10:"+b10);
+			System.out.println("5:"+b5);
+			System.out.println("2:"+b2);
+			System.out.println("1:"+b1);
+			System.out.println("0.50:"+050);
+			System.out.println("0.25:"+c025);
+			
+		}
+	}
+  
+  
+  #Use  Program Eclipse
