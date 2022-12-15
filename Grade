@@ -1,0 +1,25 @@
+#คำนวณเกรดเฉลี่ยสะสมให้กับ USER โดยรับค่าจำนวนหน่วยกิตของแต่ละวิชาเเละเกรดที่ได้ของแต่ละวิชาจาก USER
+#python
+
+x = 3
+cli = []
+sli = []
+sumCli = []
+sumAll = []
+sumC = 0
+sum = 0
+y = 0
+for i in range(1,x+1):
+  c = int(input(f"วิชาที่ {i} หน่วยกิต: "))
+  s = float(input(f"วิชาที่ {i} เกรดที่ได้: "))
+  cli.append(c)
+  sli.append(s)
+for i in range(0,x): 
+  print("วิชาที่ ",(i+1),"เกรดที่ได้ ",sli[i],"หน่วยกิต ",cli[i])
+for j in range(0,x):
+  sumC = sumC + cli[j]
+  sum = sli[j]*cli[j]
+  y = y + sum
+print("ผลรวมหน่วยกิต: ",sumC)
+print("ผลรวมหน่วยกิต * เกรด: ",y)
+print("คะแนนเกรดเฉลี่ยที่ได้: ",(y/sumC))
